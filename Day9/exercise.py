@@ -16,8 +16,8 @@ elif your_age > my_age:
 else: 
 	print('We are the same age.')
 
-num1 = int(input('Enter nubmer 1'))
-num2 = int(input('Enter nubmer 2'))
+num1 = int(input('Enter nubmer 1: '))
+num2 = int(input('Enter nubmer 2: '))
 if num1 > num2:
 	print('{} is greater than {}'.format(num1, num2))
 elif num1 < num2:
@@ -25,3 +25,36 @@ elif num1 < num2:
 else:
 	print('{} is equal to {}'.format(num1, num2))
 
+# level 2
+score = int(input('Enter a score 0 - 100: '))
+if score >= 90:
+	print('Your score {} got an A'.format(score))
+elif score >= 80:
+	print('Your score {} got a B'.format(score))
+elif score >= 70:
+	print('Your score {} got a C'.format(score))
+elif score >= 60:
+	print('Your score {} got a D'.format(score))
+else:
+	print('Your score {} got an F'.format(score))
+
+month = input('Enter a month: ')
+if month == 'September' or month == 'October' or month == 'November':
+	print('The season is Autumn.')
+	
+elif month == 'December' or month == 'January' or month == 'February':
+	print('The season is Winter.')
+	
+elif month == 'March' or month == 'April' or month == 'May':
+	print('The season is Spring.')
+	
+else:
+	print('The season is Summer.')
+
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruit = input('Enter a fruit: ')
+if fruit not in fruits:
+	fruits.append(fruit)
+	print(fruits)
+else:
+	print('That fruit already exist in the list')
