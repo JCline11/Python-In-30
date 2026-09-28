@@ -58,3 +58,39 @@ if fruit not in fruits:
 	print(fruits)
 else:
 	print('That fruit already exist in the list')
+
+# level 3 
+person={
+    'first_name': 'Asabeneh',
+    'last_name': 'Yetayeh',
+    'age': 250,
+    'country': 'Finland',
+    'is_married': True,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
+    }
+}
+
+if person.get('skills') is not None:
+	print(person.get('skills')[len(person.get('skills')) // 2])
+	if('Python' in person.get('skills')):
+		print('Python is a skill.')
+	else:
+		print('Python is not a skill.')
+
+	if(len(person['skills']) is 2 and 'JavaScript' in person['skills'] and 'React' in person['skills']):
+		print('He is a front end developer')
+	elif('Node' in person['skills'] and 'React' in person['skills'] and 'MongoDB' in person['skills']):
+		print('He is a fullstack developer')
+	elif('Node' in person['skills'] and 'Python' in person['skills'] and 'MongoDB' in person['skills']):
+		print('He is a backend developer')
+	else:
+		print('unknown title')
+
+
+if person.get("is_married"):
+	print('{} {} lives in {}. They are married'.format(person['first_name'], person['last_name'], person['country']))
+else:
+	print('{} {} lives in {}. They are not married'.format(person['first_name'], person['last_name'], person['country']))
