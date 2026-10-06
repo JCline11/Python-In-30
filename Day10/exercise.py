@@ -58,3 +58,38 @@ for i in range(101):
 		odd += i
 print("The sum of all even numbers is {}. The sum of all odd numbers is {}.".format(even, odd))
 
+# level 3
+from data.countries import countries
+from data.countries_data import countries_data
+
+for i in countries:
+	if "land" in i:
+		print(i)
+
+fruit = ['banana', 'orange', 'mango', 'lemon']
+num = len(fruit) -1
+index = 0
+while num > index:
+	temp = fruit[num]
+	fruit[num] = fruit[index]
+	fruit[index] = temp
+	num -= 1
+	index += 1
+print(fruit) 
+
+lang = {}
+for country in countries_data:
+	for i in country["languages"]:
+		lang[i] = lang.get(i, 0) + 1
+print("There are {} languages in the dataset.".format(len(lang)))
+
+top10 = sorted(lang.items(), key=lambda item: item[1], reverse=True)[:10]
+for name, count in top10:
+	print(name, " ", count)
+
+pop = {}
+for c in countries_data:
+	pop[c["name"]] = c["population"]
+top10 = sorted(pop.items(), key=lambda item: item[1], reverse=True)[:10]
+for name, count in top10:
+	print(name, " ", count)
