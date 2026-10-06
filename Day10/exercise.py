@@ -1,5 +1,5 @@
 # Exercise for day 10 of Python in 30: Loops
-
+# level 1
 for i in range(11):
 	print(i, end=" ")
 print()
@@ -42,3 +42,19 @@ for i in range(101):
 for i in range(101):
 	if (i % 2) is 1:
 		print(i)
+
+# level 2
+sum = 0
+for i in range(101):
+	sum += i
+print("The sum of all numbers is {}.".format(sum))
+
+even = 0
+odd = 0
+for i in range(101):
+	if (i % 2) is 0:
+		even += i
+	else:
+		odd += i
+print("The sum of all even numbers is {}. The sum of all odd numbers is {}.".format(even, odd))
+
