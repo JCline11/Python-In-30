@@ -134,3 +134,35 @@ def greet(name = 'Guest'):
 	return "Hello, {}!".format(name)
 print(greet())
 print(greet("Jeff"))
+
+#level 3
+def is_prime(n):
+	if n <= 1:
+		return False
+	if n <= 3:
+		return True
+	if n % 2 == 0 or n % 3 == 0:
+		return False
+
+	i = 5
+	while i * i <= n:
+		if n % i == 0 or n % (i + 2) == 0:
+			return False
+		i += 6
+	return True
+print(is_prime(137))
+print(is_prime(48))
+
+def unique_items(lst):
+	st = set(lst)
+	return len(st) is len(lst)
+print(unique_items([5,5,6,7]))
+print(unique_items([5,6,7]))
+
+def same_data_type(lst):
+	st = set()
+	for i in lst:
+		st.add(type(i))
+	return len(st) is 1
+print(same_data_type([1,2,3,4,5]))
+print(same_data_type([1,False,3,"4",5]))
