@@ -97,3 +97,40 @@ def sum_of_evens(num):
 	return sum
 print("sum of odd {}".format(sum_of_odds(20)))
 print("sum of even {}".format(sum_of_evens(20)))
+
+#level 2
+def even_and_odds(num):
+	even = 0
+	odd = 0
+	for i in range(num+1):
+		if i % 2 is 0:
+			even +=1
+		else:
+			odd +=1
+	dic = {"even": even, "odd": odd}
+	return dic
+print(even_and_odds(20))
+
+def factorial(num):
+	fact = 1
+	for i in range(num+1):
+		if i is 0:
+			continue
+		else:
+			fact *= i
+	return fact
+print("6! = {}".format(factorial(6)))
+
+def is_empty(item):
+	if item:
+		return True
+	return False
+item = None
+print(is_empty(item))
+item = 5
+print(is_empty(item))
+
+def greet(name = 'Guest'):
+	return "Hello, {}!".format(name)
+print(greet())
+print(greet("Jeff"))
